@@ -1,0 +1,43 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Inicio </a></li>
+				<li><a href="/admin/libros"><i class="fas fa-book"></i> Ir a libros</a></li>
+			</ul>
+			<ul class="header-links pull-right">
+					<li><a href="/admin/libros/disabled"><i class="fas fa-book-dead"></i> Ir a libros deshabilitados </a></li>
+			</ul>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <h1>Agregar Libro:</h1>
+    <div class="row">
+        <div class="col-15">
+            <form action="/admin/libros/create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" placeholder="imagen" name="imagen" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="sinopsis" placeholder="sinopsis" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="precio" placeholder="precio" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="valoracion" placeholder="valoracion" class="form-control" min="1" max="5">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="categoria" placeholder="categoria" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar libro</button>
+            </form>
+        </div>
+    </div>
+</div>

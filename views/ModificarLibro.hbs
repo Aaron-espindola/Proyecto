@@ -1,0 +1,44 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Inicio </a></li>
+				<li><a href="/login"><i class="fas fa-sign-in-alt"></i> Ingresa</a></li>
+				<li><a href="/registrarse"><i class="fas fa-user-plus"></i> Registrate! </a></li>
+			</ul>
+			<ul class="header-links pull-right">
+					<li><a href="/login"><i class="fas fa-user"></i> Mi cuenta</a></li>
+			</ul>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <h1>Modificar Libro:</h1>
+    <div class="row">
+        <div class="col-12">
+            {{#each libro}}
+            <form method="POST" action="/admin/libros/update/{{id}}">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" value="{{nombre}}">
+
+                    <label for="sinopsis">Sinopsis:</label>
+                    <input type="text" class="form-control" name="sinopsis" value="{{sinopsis}}">
+                    
+                    <label for="precio">Precio:</label>
+                    <input type="number" class="form-control" name="precio" value="{{precio}}">
+
+                    <label for="valoracion">Valoracion:</label>
+                    <input type="number" class="form-control" name="valoracion" value="{{valoracion}}" min="1" max="5">
+
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" class="form-control" name="categoria" value="{{categoria}}">
+                    <button type="submit" class="btn btn-primary">Modificar|</button>
+                </div>
+            </form>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+
+{{#if status}}
+<div class="conteiner">
+    <div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Inicio </a></li>
+				<li><a href="/admin/libros/create"><i class="fas fa-book-medical"></i> Agregar Libro </a></li>
+				<li><a href="/admin/libros/disabled"><i class="fas fa-book-dead"></i> Libros deshabilitados </a></li>
+			</ul>
+            <ul class="header-links pull-right">
+                <li><a href="/admin/empleados"><i class="fas fa-home"></i> Menu admin </a></li>
+            </ul>          
+	</div>
+</div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">sinpsis</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">valoracion</th>
+                        <th scope="col">categoria</th>
+                        <th scope="col">Ver mas</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Deshabilitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each libros}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nombre}}</td>
+                        <td>{{sinopsis}}</td>
+                        <td>{{precio}}</td>
+                        <td>{{valoracion}}</td>
+                        <td>{{categoria}}</td>
+                        <td><a href="/admin/libros/single/{{id}}">Ver Mas</a></td>
+                        <td><a href="/admin/libros/update/{{id}}">Modificar</a></td>
+                        <td><a href="/admin/libros/delete/{{id}}">Deshabilitar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="conteiner">
+        <div class="row" style="justify-content: space-between;">
+            {{#each libros}}
+                <div class="card" style="width: 18rem;">
+                    <img src="../images/{{uid}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{nombre}}</h5>        
+                        <p class="card-text">{{sinopsis}}</p>
+                    </div>
+                </div>
+        {{/each}}
+        </div>
+    </div>
+{{else}}
+    <div class="conteiner">
+        <div class="conteiner">
+    <div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/admin/libros"><i class="fas fa-book"></i> Libros habilitados </a></li>
+			</ul>
+	</div>
+</div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">sinpsis</th>
+                            <th scope="col">precio</th>
+                            <th scope="col">valoracion</th>
+                            <th scope="col">categoria</th>
+                            <th scope="col">habilitar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each libros}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{nombre}}</td>
+                            <td>{{sinopsis}}</td>
+                            <td>{{precio}}</td>
+                            <td>{{valoracion}}</td>
+                            <td>{{categoria}}</td>
+                            <td><a href="/admin/libros/disabled/{{id}}">Habilitar</a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+{{/if}}

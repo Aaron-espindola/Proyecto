@@ -1,0 +1,141 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Inicio </a></li>
+				<li><a href="/libros"><i class="fas fa-book"></i> Libros</a></li>
+			</ul>
+			<ul class="header-links pull-right">
+                <li><a href="/empleados"><i class="fas fa-user"></i> Menu admin </a></li>
+            </ul>   
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="conteiner">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre de usuario</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">eres admin?</th>
+                        <th scope="col">Convertir en admin</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Deshabilitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each usuarios}}
+                    <tr>
+                        <td>{{user}}</td>
+                        <td>{{pass}}</td>
+                        <td>{{admin}}</td>
+                        <td><a href="/usuarios/convert/{{id}}">Convertir</a></td>
+                        <td><a href="/usuarios/update/{{id}}">Modificar</a></td>
+                        <td><a href="/usuarios/delete/{{id}}">Deshabilitar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Sobre Mi</h3>
+								<p>Soy Aaron Espindola, esta pagina es un proyecto para el trabajo de programacion, los objetos en esta pagina no estan en venta.</p>
+								<ul class="footer-links">
+									<li><a><i class="fa fa-map-marker"></i>calle falsa 123</a></li>
+									<li><a><i class="fa fa-phone"></i>+54 11 9876-54321</a></li>
+									<li><a><i class="fas fa-envelope"></i>aaronthxmas@gmail.com</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Algunas Categorias</h3>
+								<ul class="footer-links">
+									<li><a>Terror</a></li>
+									<li><a>Romance</a></li>
+									<li><a>Ficcion</a></li>
+									<li><a>Sobre Natural</a></li>
+									<li><a>Todos</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Informacion</h3>
+								<ul class="footer-links">
+									<li><a href="#">Sobre Mi</a></li>
+									<li><a href="#">Contactame</a></li>
+									<li><a href="#">Politica de privacidad</a></li>
+									<li><a href="#">Terminos y condiciones</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Servicios</h3>
+								<ul class="footer-links">
+									<li><a href="#">Mi cuenta</a></li>
+									<li><a href="#">Carrito</a></li>
+									<li><a href="#">Lista de deseos</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<ul class="footer-payments">
+								<li><a><i class="fab fa-cc-visa"></i></a></li>
+								<li><a><i class="fa fa-credit-card"></i></a></li>
+								<li><a><i class="fab fa-cc-paypal"></i></a></li>
+								<li><a><i class="fab fa-cc-mastercard"></i></a></li>
+								<li><a><i class="fab fa-cc-discover"></i></a></li>
+								<li><a><i class="fab fa-cc-amex"></i></a></li>
+							</ul>
+							<span class="copyright">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+						<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->

@@ -1,0 +1,34 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Ir a Tienda </a></li>
+			</ul>
+			<ul class="header-links pull-right">
+					<li><a href="/admin/empleados"><i class="fas fa-user"></i> menu admin</a></li>
+			</ul>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="conteiner">
+	<div class="row">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nombre</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each empleado}}
+				<tr>
+					<td>{{id}}</td>
+					<td>{{nombre}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>   
+</div>

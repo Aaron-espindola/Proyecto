@@ -1,0 +1,72 @@
+
+{{#if status}}
+    <div class="conteiner">
+        <div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i>ir a Tienda </a></li>
+				<li><a href="/admin/empleados/create"><i class="fas fa-user-plus"></i> Agregar empleado nuevo</a></li>
+				<li><a href="/admin/empleados/disabled"><i class="fas fa-users-slash"></i> Empleados deshabilitados </a></li>
+			</ul>
+            <ul class="header-links pull-right">
+					<li><a href="/admin/libros"><i class="fas fa-book"></i> Ir a libros</a></li>
+                    <li><a href="/admin/usuarios"><i class="fas fa-user"></i> Ir a usuarios Registrados</a></li>
+			</ul>
+	</div>
+</div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Ver mas</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Deshabilitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each empleados}}
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>{{pass}}</td>
+                        <td><a href="/admin/empleados/single/{{id}}">Ver Mas</a></td>
+                        <td><a href="/admin/empleados/update/{{id}}">Modificar</a></td>
+                        <td><a href="/admin/empleados/delete/{{id}}">Deshabilitar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+        </table>
+    </div>
+</div>
+{{else}}
+    <div class="conteiner">
+        <div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/admin/empleados"><i class="fas fa-user"></i>Volver a Empleados </a></li>
+			</ul>
+	</div>
+</div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">habilitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each empleados}}
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>{{pass}}</td>
+                        <td><a href="/admin/empleados/disabled/{{id}}">Habilitar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+        </table>
+    </div>
+</div>
+{{/if}}

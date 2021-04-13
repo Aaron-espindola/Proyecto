@@ -1,0 +1,30 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Ir a Tienda </a></li>
+			</ul>
+			<ul class="header-links pull-right">
+					<li><a href="/admin/empleados"><i class="fas fa-user"></i> menu admin</a></li>
+			</ul>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <h1>Agregar Empleado:</h1>
+    <div class="row">
+        <div class="col-8">
+            <form method="POST" action="/admin/empleados/create">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="nombre">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" class="form-control" name="pass" placeholder="Contraseña">
+                    <button type="submit" class="btn btn-primary">Agregar Empleado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div id="top-header">
+		<div class="container">
+			<ul class="header-links pull-left">
+				<li><a href="/tienda"><i class="fas fa-home"></i> Inicio </a></li>
+				<li><a href="/login"><i class="fas fa-sign-in-alt"></i> Ingresa</a></li>
+				<li><a href="/registrarse"><i class="fas fa-user-plus"></i> Registrate! </a></li>
+			</ul>
+			<ul class="header-links pull-right">
+					<li><a href="/login"><i class="fas fa-user"></i> Mi cuenta</a></li>
+			</ul>
+	</div>
+</div>
+
+<br>
+<br>
+
+<div class="conteiner">
+    {{#each libro}}
+        <h2>ID: {{id}}, Nombre del libro:{{nombre}}, Sinopsis: {{sinopsis}}, Precio: {{precio}}, Valoracion: {{valoracion}}, Categoria: {{categoria}}</h2>
+    {{/each}}
+</div>
